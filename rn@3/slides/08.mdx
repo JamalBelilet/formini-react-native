@@ -1,0 +1,16 @@
+# imports and exports
+```JSX
+// file1
+export AFunction
+export CFunction
+export DObject
+export { AFunction, CFunction, DObject }
+export default BFunction
+
+// file2
+import BFunction, { Afunction, CFunction, DObject } from './file1'
+import BFunction from './file1'
+
+// file3
+export { AFunction } from './file1'
+```

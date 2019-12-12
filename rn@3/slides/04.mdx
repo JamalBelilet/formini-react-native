@@ -1,0 +1,35 @@
+# Redux
+Redux is a predictable state container for JavaScript apps.
+
+> installation
+npm install --save redux
+<!-- npm install --save react-redux -->
+
+> inmport redux
+```JSX
+import { createStore } from 'redux'
+```
+
+```JSX
+> create the reducer
+function counter(state = 0, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1 // function 1
+    case 'DECREMENT':
+      return state - 1 // function 1
+    default:
+      return state // function 1
+  }
+}
+```
+
+> create the store
+```JSX
+let store = createStore(counter)
+```
+
+> render the store
+<Provider store={store}>
+  <App />
+</Provider>,

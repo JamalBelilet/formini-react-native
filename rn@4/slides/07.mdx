@@ -1,0 +1,57 @@
+# Audio
+(https://docs.expo.io/versions/latest/sdk/audio/)
+
+0. install the Audio SDK
+> expo install expo-av
+
+
+1. create the audioObject
+```JSX
+import { Audio } from 'expo-av';
+const soundObject = new Audio.Sound();
+```
+
+2. create a play Function
+```JSX
+const play = async () => {
+  try {
+    // 2.1 load local audio file from assets
+    await soundObject.loadAsync(require('../assets/sample.mp3'));
+    // 2.2 play audio
+    await soundObject.playAsync();
+  } catch (error) {
+    // 2.3 handle errors
+  }
+}
+```
+
+3. create a stop Function
+```JSX
+const stop = async () => {
+  try {
+    // 3.1 stop audio
+    await soundObject.stopAsync();
+    // 3.2 unload audio file
+    soundObject.unloadAsync();
+  } catch (error) {
+    // 3.3 handle errors
+  }
+}
+```
+
+# Hint: show/hide JSX based on booleans
+```JSX
+const PlayerScreen = () => {
+  const [show, setShow] = useState(false)
+
+  return (
+    <Container>
+      {
+        show && (
+
+        )
+      }
+
+    </Container>
+  )
+}

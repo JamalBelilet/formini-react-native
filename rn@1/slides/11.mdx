@@ -1,0 +1,31 @@
+When state or props change, your component updates AUTOMATICALLY 🎉
+
+✨ This is the magic of React! ✨
+
+
+```jsx
+// import useState from React
+import React, { useState } from 'react'
+import { Text, View, Button } from 'react-native';
+
+export default (props) => {
+  // call useState and pass a default value
+  const [count, setCount] = useState(1)
+
+  // useState returns the current value and and update function
+  const incrementCount = () => {
+    setCount(count + 1)
+  }
+
+  return (
+      <View>
+        <Text>Hello, {props.name}</Text>
+        <Text>You've clicked  {count} times</Text> {/* Display state in {} */}
+        <Button
+          onPress={incrementCount}
+          title="Click me"
+        />
+      </View>
+  )
+}
+```

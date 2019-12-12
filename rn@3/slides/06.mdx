@@ -1,0 +1,46 @@
+# State management #2
+> create store/index.js
+1. import StateProvider
+import { StateProvider } from './state';
+import React from 'react';
+
+2. export useStore
+export { useStore } from './state'
+
+3. create the StoreProvider
+```JSX
+const StoreProvider = ({ children }) => {
+
+  // 3.1 define initialState
+  const initialState = {
+    trainings: [],
+    title: 'Kuri',
+  }
+
+  // 3.2 define the reducer
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'setTrainings':
+        return {
+          ...state,
+          trainings: action.payload
+        }
+      case 'setTitle':
+        return {
+          ...state,
+          title: action.payload
+        }
+      default:
+        return state
+    }
+  }
+
+  //4. return JSX
+  return (
+    <StateProvider initialState={initialState} reducer={reducer}>
+      {children}
+    </StateProvider>
+  );
+}
+export default StoreProvider;
+```

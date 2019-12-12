@@ -1,0 +1,37 @@
+# Style
+
+- you style your application using JavaScript.
+- All of the core components accept a prop named style.
+- It's CSS, except names are written using camel casing...
+- ...e.g. _backgroundColor_ rather than background-color.
+- It's cleaner to use StyleSheet.create
+
+1. Define a styles object using _StyleSheet.create_
+```jsx
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
+  },
+});
+```
+
+2. Set use it with `style={ styles.bigBlue }`
+```jsx
+export default () => {
+  return (
+    <View>
+      <Text style={styles.red}>just red</Text>
+      <Text style={styles.bigBlue}>just bigBlue</Text>
+      <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+      <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+    </View>
+  );
+}
+```

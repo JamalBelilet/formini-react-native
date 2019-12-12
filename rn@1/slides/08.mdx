@@ -1,0 +1,24 @@
+# After defining a function component
+> you can use it within another component - it is a "custom component"
+
+```jsx
+// define the component Greeting
+function Greeting() {
+  const name = "Jamal"
+  return (
+      <View>
+        <Text>Hello! {name}</Text>
+      </View>
+  )
+}
+
+// Use Greeting component in another component
+function App() {
+    return (
+        <View>
+            <Greeting/>
+            <Text>Duis laboris sunt est commodo reprehenderit ea aliquip cupidatat aliqua nostrud anim velit.</Text>
+        </View>
+    )
+}
+```

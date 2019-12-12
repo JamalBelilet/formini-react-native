@@ -1,0 +1,82 @@
+# Common UI components
+
+0. View
+```JSX
+<View style={styles.container}>
+  {/* Any valid Components */}
+</View>
+```
+
+1. Text
+```JSX
+<View style={styles.container}>
+  <Text>Mollit non proident nulla incididunt proident ex dolore irure.</Text>
+</View>
+```
+
+2. Buttons
+```JSX
+<View style={styles.container}>
+  <View style={styles.buttonContainer}>
+    <Button
+      onPress={this._onPressButton}
+      title="Press Me"
+    />
+  </View>
+  <View style={styles.buttonContainer}>
+    <Button
+      onPress={this._onPressButton}
+      title="Press Me"
+      color="#841584"
+    />
+  </View>
+  <View style={styles.alternativeLayoutButtonContainer}>
+    <Button
+      onPress={this._onPressButton}
+      title="This looks great!"
+    />
+    <Button
+      onPress={this._onPressButton}
+      title="OK!"
+      color="#841584"
+    />
+  </View>
+  </View>
+```
+
+3. ScrollView
+```JSX
+<ScrollView>
+  {/* Any valid Components */}
+</<ScrollView>
+```
+
+4. Image
+```JSX
+<Image
+  source={{
+    uri: "https://facebook.github.io/react-native/img/tiny_logo.png",
+    width: 64,
+    height: 64
+  }}
+/>
+```
+
+5. Flatlist
+```JSX
+<FlatList
+  data={[
+    {key: 'Devin'},
+    {key: 'Dan'},
+    {key: 'Dominic'},
+    {key: 'Jackson'},
+    {key: 'James'},
+    {key: 'Joel'},
+    {key: 'John'},
+    {key: 'Jillian'},
+    {key: 'Jimmy'},
+    {key: 'Julie'},
+  ]}
+  renderItem={({item}) => <Text style={styles.item} key={item.key}>{item.key}</Text>}
+/>
+```

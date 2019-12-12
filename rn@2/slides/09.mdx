@@ -1,0 +1,29 @@
+# GraphQL
+Fetching data from GraphQL endpoints can be done...
+directly using the fetch API
+
+```JSX
+const graphqlQuery = `
+query {
+  breakingNewses {
+    id
+    title
+  }
+  importantNewses {
+    id
+    title
+  }
+}
+`
+const options = {
+  method: "post",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    query: graphqlQuery
+  })
+};
+
+fetch(`url`, options)
+```

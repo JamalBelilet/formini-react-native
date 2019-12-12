@@ -1,0 +1,68 @@
+# Navigation #2
+
+5. Navigation from A to B
+
+> page A
+```JSX
+const HomeScreen = (props) => {
+  const { navigate } = props.navigation;
+  const details = () => {
+    navigate('Details')
+  }
+  return (
+    <Button
+      title="Go to details page"
+      onPress={details}
+    />
+  );
+}
+HomeScreen.navigationOptions = {
+  title: 'Home',
+};
+```
+> page B
+```JSX
+import React from 'react'
+import { View, Text } from 'react-native'
+
+const DetailsScreen = () => {
+  return (
+    <View>
+      <Text>DETAILS PAGE</Text>
+    </View>
+  )
+}
+export default DetailsScreen
+
+```
+
+6.  Passing data from A to B
+```JSX
+<Button
+  title="Go to details page"
+  onPress={() => navigate('Details', { mydata: ['alpha', 'beta'], name: 'jamal' })}
+/>
+```
+
+7. Reading data from the previous page
+```JSX
+const ProfileScreen = (props) => {
+  const { getParam } = props.navigation
+  const mydata = getParam('mydata', [])
+  return (
+    <View>
+    {
+      mydata.map((item) =><Text>{item}</Text>)
+    }
+    </View>
+  )
+}
+```
+> hint: desctructuring
+```JSX
+// lists:
+const [ a, b ] = [1, 2, 3, 4];
+
+// objects
+const { navigate } = {item: any, navigate: any}
+```

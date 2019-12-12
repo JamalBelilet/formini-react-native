@@ -1,0 +1,27 @@
+# Text Inputs
+
+```JSX
+import { TextInput, ... } from 'react-native';
+
+const MyInputsComponent = (props) => {
+  const [title, setTitle] = useState('')
+
+  return (
+    <View style={{padding: 10}}>
+      <TextInput
+        style={{height: 40}}
+        placeholder="ex: Learning React!"
+        onChangeText={(text) => setTitle(text)}
+        value={title}
+      />
+      <Text style={{padding: 10, fontSize: 42}}>
+        {title.toUpperCase()}
+      </Text>
+    </View>
+  );
+}
+```
+
+
+
+

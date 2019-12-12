@@ -1,0 +1,20 @@
+# Layouts with NativeBase
+To compose layouts we can use `Cols` and `Rows`
+instead of using Views with flex
+
+import { Col, Row } from 'react-native-easy-grid';
+// flexible heights
+<Row>
+  <Col style={{ backgroundColor: '#635DB7' }}></Col>
+  <Row>
+    <Row style={{ backgroundColor: '#635DB7' }}></Row>
+    <Row style={{ backgroundColor: '#00CE9F' }}></Row>
+  </Col>
+</Row>
+// fixed heights
+<Row>
+  <Col style={{ backgroundColor: '#635DB7', height: 200 }}></Col>
+  <Col style={{ backgroundColor: '#635DB7', height: 200 }}></Col>
+  <Col style={{ backgroundColor: '#635DB7', height: 200 }}></Col>
+  <Col style={{ backgroundColor: '#00CE9F', height: 200 }}></Col>
+</Row>

@@ -1,0 +1,16 @@
+# Destructuring usecases
+```JSX
+const AComponent = ({aParam, bParam}) => {
+  return <Text>{aParam} {bParam}</Text>
+}
+```
+
+# Deep Destructuring
+```JSX
+const AScreen = ({navigation: { navigate, getParam }}) => {
+  ...
+  navigate('ARoute')
+  ...
+  return <View> {/* any views */} </View>
+}
+```

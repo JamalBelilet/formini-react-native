@@ -1,0 +1,60 @@
+# Navigation
+
+1. Installation of dependencies
+```bash
+npm i react-navigation
+npm i react-native-gesture-handler
+npm i react-navigation-stack
+```
+
+2. Configuration of the main navigator
+```JSX
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import DetailsScreen from './screens/details'
+import HomeScreen from './screens/home'
+
+const MainNavigator = createStackNavigator({
+  // Home: { screen: HomeScreen },
+  Details: { screen: DetailsScreen },
+});
+const App = createAppContainer(MainNavigator);
+export default App;
+```
+
+3. Configuration of headers
+```JSX
+const HomeScreen = () => JSX
+HomeScreen.navigationOptions = {
+  title: 'Writings'
+}
+export default HomeScreen
+```
+
+4. Other headrs common options
+```JSX
+AScreen.navigationOptions = {
+  title: 'Home',
+  headerStyle: {
+    backgroundColor: '#000000',
+  },
+  headerTitleStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+};
+```
+
+4.A to make any section clickable
+<TouchableOpacity
+  onPress={anyfunction}
+>
+  {/* any components/views */}
+</TouchableOpacity>
+
+4.B Remove the default header.
+```JSX
+AScreen.navigationOptions = {
+  header: null
+};
+```

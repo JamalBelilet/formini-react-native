@@ -1,0 +1,36 @@
+# State management
+1. Add StoreProvider as a root element
+import StoreProvider from './store'
+...
+<StoreProvider>
+  // children
+</StoreProvider>
+
+2. create Store and dispatch from useStore
+```JSX
+import { useStore } from '../store';
+
+const AComponent = () => {
+  ...
+  const [{ news }, dispatch] = useStore();
+  ...
+  return ...
+    data={news}
+  ...
+}
+```
+
+
+3. create Store and dispatch from useStore
+```JSX
+dispatch({
+  type:'toggleExpand'
+})
+
+dispatch({
+  type:'reservations',
+  payload: []
+})
+
+store.reservations
+```

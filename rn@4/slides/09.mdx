@@ -1,0 +1,17 @@
+# FileSystem
+(https://docs.expo.io/versions/latest/sdk/filesystem/)
+
+0. install the FileSystem SDK
+> expo install expo-file-system
+
+0. import the FileSystem SDK
+import * as FileSystem from 'expo-file-system';
+
+2. start FileSystem (uri is a link to a file)
+```JSX
+const image_source = 'https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80';
+const { uri } = await FileSystem.downloadAsync(
+  image_source,
+  FileSystem.documentDirectory + 'image.jpeg'
+)
+```

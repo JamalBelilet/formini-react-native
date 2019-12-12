@@ -1,0 +1,31 @@
+
+Data that comes in from the outside of a component is called
+> "props" (properties)
+
+This can be passed
+> from a parent to a child through JSX attributes
+
+Props come into function components as
+> the first argument to the function.
+
+```jsx
+// Props as the first argument to the function
+function Greeting(props) {
+  return (
+      <View>
+        <Text>Hello, {props.name}</Text>
+      </View>
+  )
+}
+
+// Set a prop on a child component by passing an attribute
+export default function App() {
+    return (
+        <View>
+            <Greeting name="Jamal" />
+            <Text>Minim id sint do labore.</Text>
+        </View>
+    )
+}
+```
+

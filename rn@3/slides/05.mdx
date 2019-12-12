@@ -1,0 +1,17 @@
+# State management
+> create the store folder
+> create a state.js file with the following
+import React, { createContext, useReducer, useContext } from 'react';
+
+// 1. creation de context
+export const StateContext = createContext();
+
+// 2. creation de stateProvider
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
+    {children}
+  </StateContext.Provider>
+);
+
+// 3. creation de useStore
+export const useStore = () => useContext(StateContext);

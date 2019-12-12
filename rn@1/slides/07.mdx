@@ -1,0 +1,18 @@
+# Components are functions that return JSX
+
+- JSX looks like HTML but is actually JavaScript
+- Inside of JSX use curly braces to contain JS
+- A lot of people go "YUCK!" when they see HTML mixed into JS,
+    but JSX is actually one of the things that makes React awesome 🦄
+
+```jsx
+// regular function
+function Greeting() {
+  const name = "Jamal"
+  return ( // Return JSX
+      <View>
+        <Text>Hello, {name}</Text> {/* Anything inside {} will execute as JS */}
+      </View>
+  )
+}
+```

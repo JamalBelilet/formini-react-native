@@ -1,0 +1,18 @@
+# More about inputs
+
+1. TextInput properties
+<TextInput
+  {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
+  multiline
+  numberOfLines={4}
+  editable
+  maxLength={40}
+/>
+
+2. Switch
+>Renders a boolean input.
+<Switch
+  onValueChange = {(value) => {setValue(!value)}}
+  value = {_value}
+/>
+

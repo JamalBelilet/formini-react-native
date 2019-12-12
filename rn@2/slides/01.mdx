@@ -1,0 +1,18 @@
+# Images
+
+1. From assets (local images)
+<Image source={require('./images/icon.png')} />
+
+2. From network
+<Image
+  source={{uri: 'https://facebook.github.io/react/logo-og.png'}}
+  style={{width: 400, height: 400}}
+/>
+
+3. Uri Data Images
+<Image
+  source={{
+    uri:
+      'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+  }}
+/>

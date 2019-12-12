@@ -1,0 +1,75 @@
+# NativeBase
+With `native-base` we use `Container` instead of `View`
+
+1. Header
+<Header>
+  <Left>
+    <Button transparent>
+      <Icon name='menu' />
+    </Button>
+  </Left>
+  <Body>
+    <Title>Header</Title>
+  </Body>
+  <Right />
+</Header>
+
+2. Button
+There's a wide rang of options to create standard based buttons
+[full, block, bordered, primary, success, info, warning, dark...]
+
+<Button bordered>
+  <Text>Click Me!</Text>
+</Button>
+
+3. Card
+<Card>
+  <CardItem>
+    <Body>
+      <Text>
+          //Your text here
+      </Text>
+    </Body>
+  </CardItem>
+</Card>
+
+4. Fabs
+<Fab
+  style={{ backgroundColor: '#5067FF' }}
+  position="bottomRight"
+  onPress={() => { }}>
+  <Icon name="home" />
+</Fab>
+
+5. Forms
+<Form>
+  <Item>
+    <Input placeholder="Username" />
+  </Item>
+  <Item last>
+    <Input placeholder="Password" />
+  </Item>
+</Form>
+
+6. List
+<List>
+  <ListItem>
+    <Text>Simon Mignolet</Text>
+  </ListItem>
+  <ListItem>
+    <Text>Nathaniel Clyne</Text>
+  </ListItem>
+  <ListItem icon>
+    <Left>
+      <Button style={{ backgroundColor: "#FF9501" }}>
+        <Icon active name="airplane" />
+      </Button>
+    </Left>
+    <Body>
+      <Text>Airplane Mode</Text>
+    </Body>
+    <Right>
+      <Switch value={false} />
+    </Right>
+  </ListItem>
+</List>

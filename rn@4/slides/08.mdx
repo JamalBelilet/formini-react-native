@@ -1,0 +1,36 @@
+# Network
+(https://docs.expo.io/versions/latest/sdk/network/)
+
+0. install the Network SDK
+> expo install expo-network
+
+0. import the Network SDK
+import * as Network from 'expo-network';
+
+2. get network's status
+```JSX
+const networkStatus = await Network.getNetworkStateAsync();
+// {
+//   type: NetworkStateType.CELLULAR,
+//   isConnected: true,
+//   isInternetReachable: true,
+// }
+```
+
+3. get the ip address
+```JSX
+const ipAddress = await Network.getIpAddressAsync();
+// "92.168.32.44"
+```
+
+4. get the mac address
+```JSX
+const macAddress = await Network.getMacAddressAsync();
+// "E5:12:D8:E5:69:97"
+```
+
+5. detect airplain-mode status
+```JSX
+const isAirplaneModeEnabled = await Network.isAirplaneModeEnabledAsync();
+// false
+```
